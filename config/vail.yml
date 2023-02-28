@@ -1,0 +1,4 @@
+- url: https://www.vail.com/the-mountain/mountain-conditions/mountain-cams.aspx
+  output: shots/vail.png
+  wait: 2500
+  selector: "#webcam_timecam_2"

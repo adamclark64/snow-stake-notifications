@@ -1,0 +1,16 @@
+- url: https://www.skicb.com/the-mountain/mountain-conditions/mountain-cams.aspx
+  output: shots/cb1.png
+#   width: 1600
+#   height: 2500
+  wait: 2500
+  selector: "#webcam_hd_relay_1"
+  
+#  values for further control
+#   width: 1600
+#   height: 1600
+#   quality: 80
+#   wait: 2000
+#   javascript: |
+#     document.querySelectorAll(
+#       '[data-ad-rendered],#ensNotifyBanner'
+#     ).forEach(el => el.style.display = 'none')

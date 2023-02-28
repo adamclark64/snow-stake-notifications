@@ -1,0 +1,58 @@
+name: Send Snow Stake Notification
+
+on:
+# Only trigger, when the build workflow succeeded
+  workflow_run:
+    workflows: ["get screenshots"] # wait for stake pics
+    types:
+      - completed
+  schedule:
+    # 5:00am MST everyday
+    - cron: "00 12 * * *"
+#   push:
+  workflow_dispatch:
+
+env:
+  TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
+  TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
+
+jobs:
+  snow-stakes-notification1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+      - name: Sending Snow Stake Notification
+        uses: adamclark64/twilio-actions-sms-mms@70f1c4f1cb8ec83a66cb8f38acee66aa25f9193b
+        with:
+          body: snow stakes for ${{ steps.date.outputs.date }}
+#           https://raw.githubusercontent.com/adamclark64/snow-stake-notifications/main/shots/vail.png
+#             https://raw.githubusercontent.com/adamclark64/snow-stake-notifications/main/shots/monarch1.png
+#             https://raw.githubusercontent.com/adamclark64/snow-stake-notifications/main/shots/monarch2.png
+          mediaUrl: |
+            https://raw.githubusercontent.com/adamclark64/snow-stake-notifications/main/shots/cb1.png
+            https://raw.githubusercontent.com/adamclark64/snow-stake-notifications/main/shots/cb2.png
+            https://raw.githubusercontent.com/adamclark64/snow-stake-notifications/main/shots/breck.png
+          from: ${{secrets.TWILIO_FROM}}
+          to: ${{secrets.TWILIO_TO}}
+#         env:
+#           TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
+#           TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
+  snow-stakes-notification2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+      - name: Sending Snow Stake Notification
+        uses: adamclark64/twilio-actions-sms-mms@70f1c4f1cb8ec83a66cb8f38acee66aa25f9193b
+        with:
+          body: snow stakes for ${{ steps.date.outputs.date }}
+          mediaUrl: |
+            https://raw.githubusercontent.com/adamclark64/snow-stake-notifications/main/shots/vail.png
+            https://raw.githubusercontent.com/adamclark64/snow-stake-notifications/main/shots/monarch1.png
+            https://raw.githubusercontent.com/adamclark64/snow-stake-notifications/main/shots/monarch2.png
+          from: ${{secrets.TWILIO_FROM}}
+          to: ${{secrets.TWILIO_TO}}
+

@@ -1,0 +1,4 @@
+- url: https://www.breckenridge.com/the-mountain/mountain-conditions/mountain-cams.aspx
+  output: shots/breck.png
+  wait: 2500
+  selector: "#webcam_timecam_1"

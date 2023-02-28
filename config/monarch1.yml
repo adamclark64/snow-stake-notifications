@@ -1,0 +1,13 @@
+- url: https://assets2.webcam.io/w/z7Arw9/latest.jpg
+  output: shots/monarch1.png
+  wait: 2000
+  
+#  values for further control
+#   width: 1600
+#   height: 1600
+#   quality: 80
+#   wait: 2000
+#   javascript: |
+#     document.querySelectorAll(
+#       '[data-ad-rendered],#ensNotifyBanner'
+#     ).forEach(el => el.style.display = 'none')
