@@ -2,8 +2,8 @@ name: get screenshots
 
 on:
   schedule:
-#     - cron: "20 4 * * *"
-    - cron: "10 22 * * *"
+    # 5:00am MST everyday
+    - cron: "00 12 * * *"
   push:
   workflow_dispatch:
 

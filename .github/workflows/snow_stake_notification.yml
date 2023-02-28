@@ -6,10 +6,6 @@ on:
     workflows: ["get screenshots"] # wait for stake pics
     types:
       - completed
-  schedule:
-    # 5:00am MST everyday
-    - cron: "00 12 * * *"
-#   push:
   workflow_dispatch:
 
 env:
