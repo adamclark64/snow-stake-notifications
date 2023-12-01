@@ -3,7 +3,7 @@
 #   width: 1600
 #   height: 2500
   wait: 2500
-  selector: "#webcam_hd_relay_1"
+  # selector: "#webcam_hd_relay_1"
   
 #  values for further control
 #   width: 1600
