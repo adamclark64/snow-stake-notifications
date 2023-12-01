@@ -1,9 +1,9 @@
-- url: https://www.skicb.com/the-mountain/mountain-conditions/mountain-cams.aspx
+- url: https://live9.brownrice.com/cam-images/crestedbuttesnowstake.jpg
   output: shots/cb2.png
 #   width: 1600
 #   height: 2500
   wait: 2500
-  selector: "#webcam_hd_relay__player_2"
+  # selector: "#webcam_hd_relay__player_2"
   
 #  values for further control
 #   width: 1600
