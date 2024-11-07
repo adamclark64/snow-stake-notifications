@@ -1,0 +1,3 @@
+- url: https://webcams.opensnow.com/current/1960.jpg
+  output: shots/copper.png
+  wait: 2000
