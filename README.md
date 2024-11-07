@@ -1,4 +1,5 @@
 # latest 
+<img alt="crested butte" src="shots/copper.png">
 <img alt="crested butte" src="shots/cb1.png">
 <img alt="crested butte" src="shots/cb2.png">
 <img alt="breck" src="shots/breck.png">
