@@ -50,6 +50,9 @@ jobs:
     - name: Breck shot
       run: |
         shot-scraper multi config/breck.yml
+    - name: Copper
+      run: |
+        shot-scraper multi config/copper.yml
     # - name: Vail shot
     #   run: |
     #     shot-scraper multi config/vail.yml
